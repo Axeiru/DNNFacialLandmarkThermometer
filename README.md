@@ -1,5 +1,6 @@
 # DNN Facial Landmark Thermometer
 ## GPU-Accelerated Facial Landmark Thermometer for Jetson Nano & PureThermal Mini using FLIR Radiometric Lepton 3.5
+#### This project attempts to detect fevers by tracking the medial canthus of the eye which serves as a proxy for internal body temperature.
 
 ![startupExample](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/startupExample.gif)
 
@@ -31,12 +32,15 @@ python3 DNNFacialLandmarkThermometer.py
 
 ![example_3](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/example_3.gif)
 
+### The included stl can be printed to serve as an alignment mount for the dual cameras
+<img src="https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/dual_cam_module_v7.png" width="500" />
+
 ### Copies of required files are included, however original sources are listed below and deserve many thanks!
-deploy.prototxt.txt: [source.](https://github.com/keyurr2/face-detection/blob/master/deploy.prototxt.txt) - MIT License
+- deploy.prototxt.txt: [source.](https://github.com/keyurr2/face-detection/blob/master/deploy.prototxt.txt) - MIT License
 
-res10_300x300_ssd_iter_140000.caffemodel: [source.](https://github.com/keyurr2/face-detection/blob/master/res10_300x300_ssd_iter_140000.caffemodel) - MIT License
+- res10_300x300_ssd_iter_140000.caffemodel: [source.](https://github.com/keyurr2/face-detection/blob/master/res10_300x300_ssd_iter_140000.caffemodel) - MIT License
 
-shape_predictor_68_face_landmarks.dat: [source.](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) - Creative Commons Zero v1.0
+- shape_predictor_68_face_landmarks.dat: [source.](https://github.com/davisking/dlib-models/blob/master/shape_predictor_68_face_landmarks.dat.bz2) - Creative Commons Zero v1.0
 
 
 
