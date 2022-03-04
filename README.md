@@ -2,7 +2,15 @@
 ## GPU-Accelerated Facial Landmark Thermometer for Jetson Nano & PureThermal Mini using FLIR Radiometric Lepton 3.5
 #### This project attempts to detect fevers by tracking the medial canthus of the eye which serves as a proxy for internal body temperature.
 
-![startupExample](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/startupExample.gif)
+![startupExample](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/startupExample.gif)
+
+![mainExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_1.gif)
+
+![mainExample_2](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_2.gif)
+
+![mainExample_3](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_3.gif)
+
+![stillTrackingExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/stillTrackingExample_1.jpg)
 
 ### 1. To begin, update your Jetson and install dependencies by running the following:
 ```
@@ -30,7 +38,7 @@ cd DNNFacialLandmarkThermometer/
 python3 DNNFacialLandmarkThermometer.py
 ```
 
-![example_3](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/example_3.gif)
+![example_3](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/example_3.gif)
 
 ### The included stl can be printed to serve as an alignment mount for the dual cameras
 <img src="https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/dual_cam_module_v7.png" width="500" />
@@ -45,8 +53,6 @@ python3 DNNFacialLandmarkThermometer.py
 
 
 ### More Examples:
-![example_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/example_1.gif)
+![example_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/example_1.gif)
 
-![example_2](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/example_2.gif)
-
-
+![example_2](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/example_2.gif)
