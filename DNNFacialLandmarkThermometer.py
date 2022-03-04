@@ -260,7 +260,7 @@ class GUI:
             self.recordVideoButton.configure(text="Recording", bg="red", activebackground="red")
             self.outputRecording = cv2.VideoWriter("output/vid-" + time.strftime("%d-%m-%Y-%H-%M-%S") + ".avi",
             cv2.VideoWriter.fourcc('M','J','P','G'),
-                2.8, # Empirically determined based on Jetson Nano 4GB, CPU @ 2GHz, GPU @ 1.2GHz, recording to main SD card, stock performance will be lower
+                3, # Empirically determined based on Jetson Nano 4GB, CPU @ 2GHz, GPU @ 1.2GHz, recording to main SD card, stock performance will be lower
                 (1280, 720))
 
     def readMousePosition(self):
