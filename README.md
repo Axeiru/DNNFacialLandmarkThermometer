@@ -10,7 +10,7 @@
 
 ![mainExample_3](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_3.gif)
 
-![stillTrackingExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/stillTrackingExample_1.jpg)
+![stillTrackingExample_2](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/stillTrackingExample_2.jpg)
 
 ### 1. To begin, update your Jetson and install dependencies by running the following:
 ```
