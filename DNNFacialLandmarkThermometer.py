@@ -176,7 +176,7 @@ class GUI:
         self.net = loadModel()
         self.frameWidth = 640
         self.frameHeight = 360
-        self.alignment_padding = 100
+        self.alignment_padding = 50
         self.window = window
         self.window.title(windowTitle)
         self.dlib_facelandmark = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
@@ -223,11 +223,11 @@ class GUI:
         self.sliderFrame.pack()
 
         self.visibleMinSlider = tkinter.Scale(self.sliderFrame, length = 300, from_= 0, to = 400, orient=tkinter.HORIZONTAL, label = "visibleMinSlider: ")
-        self.visibleMinSlider.set(150)
+        self.visibleMinSlider.set(200)
         self.visibleMinSlider.pack(padx = 5, pady = 5, side = tkinter.LEFT)
 
         self.visibleMaxSlider = tkinter.Scale(self.sliderFrame, length = 300, from_= 0, to = 400, orient=tkinter.HORIZONTAL, label = "visibleMaxSlider: ")
-        self.visibleMaxSlider.set(265)
+        self.visibleMaxSlider.set(235)
         self.visibleMaxSlider.pack(padx = 5, pady = 5, side = tkinter.LEFT)
 
         self.thermalMinSlider = tkinter.Scale(self.sliderFrame, length = 300, from_= 0, to = 400, orient=tkinter.HORIZONTAL, label = "thermalMinSlider: ")
@@ -235,7 +235,7 @@ class GUI:
         self.thermalMinSlider.pack(padx = 5, pady = 5, side = tkinter.RIGHT)
 
         self.thermalMaxSlider = tkinter.Scale(self.sliderFrame, length = 300, from_= 0, to = 400, orient=tkinter.HORIZONTAL, label = "thermalMaxSlider: ")
-        self.thermalMaxSlider.set(300)
+        self.thermalMaxSlider.set(275)
         self.thermalMaxSlider.pack(padx = 5, pady = 5, side = tkinter.RIGHT)
 
         self.finalImage = self.canvas.create_image(0, 0, image=None, anchor=tkinter.NW)
@@ -298,6 +298,7 @@ class GUI:
 
         calculatedRegistration = cv2.rectangle(paddedVisibleCanny,top_left, bottom_right, 255, 1)
         croppedOverlayedCannyFrame = calculatedRegistration[self.alignment_padding:-self.alignment_padding,self.alignment_padding:-self.alignment_padding,:]
+        croppedOverlayedCannyFrame = cv2.addWeighted(croppedOverlayedCannyFrame, 1, thermalCanny, 1, 0)
 
         templateMatchResult = cv2.merge((templateMatchResult, templateMatchResult, templateMatchResult))
         templateMatchResult = cv2.circle(templateMatchResult, max_loc, radius=5, color=(255, 0, 0), thickness=-1)
