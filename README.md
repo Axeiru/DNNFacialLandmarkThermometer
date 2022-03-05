@@ -95,7 +95,7 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 
 - The FLIR Lepton 3.5's maximum capture rate is ~9Hz which presents an artifical 'sweet-spot,' though higher visible framerates still appear smoother. A Jetson Xavier NX is likely better suited at running the current implementation at useable framerates than a Jetson Nano.
 
-- Presently the most computationally intensive operations performed are Canny edge-detection and the cross-correlation template matching. The most direct way to improve performance is by reducing self.alignment_padding to smaller values. This will have the effect of reducing the maximum possible offset.
+- Presently the most computationally intensive operations performed are Canny edge-detection and the cross-correlation template matching. The most direct way to improve performance is by reducing ```self.alignment_padding``` to smaller values. This will have the effect of reducing the maximum possible offset.
 
 <br/>  
 
