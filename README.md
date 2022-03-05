@@ -67,7 +67,7 @@ Visible and thermal images contain radically different information that often do
 
 - Canny edge detection hysteresis thresholds can be controlled for each image via sliders.
 
-- The background is norminally white, however it switches between:
+- The background is norminally white, however, it switches between:
   - Green, if faces are detected and all medial canthus temperatures are below the fever threshold of 38 degrees Celcius
   - Red, if a fever is detected, i.e. medial canthus temperature >= 38.0 Celcius.
 
@@ -85,13 +85,13 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 
 - A momentum-based model could be used to prevent discontinuitues in image offsets, ensuring smooth adjustments
 
-- Another possibility is applying a Gaussian mask to the computed cross-corelation to prefer smaller, more central offsets.
+- Another possibility is applying a Gaussian mask to the computed cross-correlation to prefer smaller, more central offsets.
 
 <br/>
 
 ### Framerate Performance Notes:
 
-- Ideally, images would be captured from each camera in separate threads, however tkinter is inherently single-threaded. Future revisions may move away from tkinter to implement proper multithreaded image capture.
+- Ideally, images would be captured from each camera in separate threads, however, tkinter is inherently single-threaded. Future revisions may move away from tkinter to implement proper multithreaded image capture.
 
 - The FLIR Lepton 3.5's maximum capture rate is ~9Hz which presents an artifical 'sweet-spot,' though higher visible framerates still appear smoother. A Jetson Xavier NX is likely better suited at running the current implementation at useable framerates than a Jetson Nano.
 
@@ -101,7 +101,7 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 
 ### General Notes:
 
-- Overclocking is recommended to attain maximum performance, however this requires recompiling the kernel and takes several hours. A procedure to overclock the Jetson Nano's CPU to 2GHz & GPU to 1.2GHz will be added.
+- Overclocking is recommended to attain maximum performance, however, this requires recompiling the kernel and takes several hours. A procedure to overclock the Jetson Nano's CPU to 2GHz & GPU to 1.2GHz will be added.
 
 - This project was entirely developed on a Jetson Nano, including recording & transcoding examples.
 
@@ -113,7 +113,7 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 
 <br/>
 
-### Potential future improvements/features:
+### Planned improvements/features:
 
 - Manually setting high-gain mode & skin emissivity values via firmware
 - Implementing command line options
@@ -143,7 +143,7 @@ The included stl can be printed to serve as an alignment mount for the dual came
 
 <br/>
 
-- Copies of required files are included, however original sources are listed below and deserve many thanks!
+- Copies of required files are included, however, original sources are listed below and deserve many thanks!
   - deploy.prototxt.txt: [source.](https://github.com/keyurr2/face-detection/blob/master/deploy.prototxt.txt) - MIT License
 
   - res10_300x300_ssd_iter_140000.caffemodel: [source.](https://github.com/keyurr2/face-detection/blob/master/res10_300x300_ssd_iter_140000.caffemodel) - MIT License
