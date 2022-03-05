@@ -278,7 +278,7 @@ class GUI:
 
     def templateBasedImageRegistration(self, visibleCanny, thermalCanny, visible_image, thermal_image):
         # Performs template matching between detected canny edges in visible and thermal camera images then naively aligns based on coordinates of max computed cross-correlation
-        # Returns third row frame by concatenating: crossCorrelationFrame, croppedOverlayedAligned, croppedOverlayedCannyFrame horizontally
+        # Returns third row frame by concatenating: crossCorrelationFrame, croppedOverlayedAligned, simulatedCroppedOverlayedCanny horizontally
         paddedVisibleCanny = np.pad(visibleCanny, pad_width=[(self.alignment_padding, self.alignment_padding), (self.alignment_padding, self.alignment_padding),(0, 0)], mode='constant')
         templateMatchResult = cv2.matchTemplate(paddedVisibleCanny, thermalCanny, cv2.TM_CCORR)
 
@@ -297,8 +297,8 @@ class GUI:
         croppedOverlayedAligned = overlayedAligned[self.alignment_padding:-self.alignment_padding, self.alignment_padding:-self.alignment_padding, :]
 
         calculatedRegistration = cv2.rectangle(paddedVisibleCanny,top_left, bottom_right, 255, 1)
-        croppedOverlayedCannyFrame = calculatedRegistration[self.alignment_padding:-self.alignment_padding,self.alignment_padding:-self.alignment_padding,:]
-        croppedOverlayedCannyFrame = cv2.addWeighted(croppedOverlayedCannyFrame, 1, thermalCanny, 1, 0)
+        simulatedCroppedOverlayedCanny = calculatedRegistration[self.alignment_padding:-self.alignment_padding,self.alignment_padding:-self.alignment_padding,:]
+        simulatedCroppedOverlayedCanny = cv2.addWeighted(simulatedCroppedOverlayedCanny, 1, thermalCanny, 1, 0)
 
         templateMatchResult = cv2.merge((templateMatchResult, templateMatchResult, templateMatchResult))
         templateMatchResult = cv2.circle(templateMatchResult, max_loc, radius=5, color=(255, 0, 0), thickness=-1)
@@ -306,7 +306,7 @@ class GUI:
         crossCorrelationFrame = np.full((self.frameHeight, self.frameWidth, 3), 255, dtype=np.uint8)
         crossCorrelationFrame[(self.frameHeight//2 - self.alignment_padding):(2*(self.alignment_padding)+self.frameHeight//2+1 - self.alignment_padding), (self.frameWidth//2 - self.alignment_padding):(2*(self.alignment_padding)+self.frameWidth//2+1 - self.alignment_padding), :] = templateMatchResult
 
-        finalAlignmentFrame = np.concatenate((crossCorrelationFrame, croppedOverlayedAligned, croppedOverlayedCannyFrame), axis=1)
+        finalAlignmentFrame = np.concatenate((crossCorrelationFrame, croppedOverlayedAligned, simulatedCroppedOverlayedCanny), axis=1)
 
         return finalAlignmentFrame
 
