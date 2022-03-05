@@ -65,6 +65,8 @@ Visible and thermal images contain radically different information that often do
 
 - The displayed views can be saved as a video or as individal frames.
 
+- Canny edge detection hysteresis thresholds can be controlled for each image via sliders.
+
 - The background is norminally white, however it switches between:
   - Green, if faces are detected and all medial canthus temperatures are below the fever threshold of 38 degrees Celcius
   - Red, if a fever is detected, i.e. medial canthus temperature >= 38.0 Celcius.
@@ -107,7 +109,7 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 
 - Future offloading of processing to the GPU should generally improve performance, however, Jetson Xavier NX may be a better choice for future revisions as the Nano's CPU is used heavily and showing its limits.
 
-- A Jetson Nano 4GB is highly recommended as the facial detection model and matrix operations consume ~1GB of RAM. This project may run on the Jetson Nano 2GB, but this hasn't been tested yet.
+- A Jetson Nano 4GB is highly recommended as the facial detection model and matrix operations consume ~1GB of RAM. This project may run on the Jetson Nano 2GB, but this hasn't been tested yet and will likely result in severe memory thrashing.
 
 <br/>
 
@@ -127,7 +129,6 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 ### Supporting Resources:
 
 *Multispectral Thermal Imaging with a LWIR+VIS Camera*
-
 - Hines, Jacob, and Evan Wang. “Multispectral Thermal Imaging with a LWIR+VIS Camera.” *Stanford EE367 / CS448I: Computational Imaging*, Stanford University, 17 Mar. 2019, http://stanford.edu/class/ee367/Winter2019/hines_wang_report.pdf.
 
   - Extremely illuminating and informative survey into multispectral image registration and fusion. Many thanks to the Authors!
@@ -136,7 +137,6 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 <br/>
 
 The included stl can be printed to serve as an alignment mount for the dual cameras
-
 <img src="https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/dual_cam_module_v7.png" width="500" />
 
 <br/>
@@ -152,7 +152,7 @@ The included stl can be printed to serve as an alignment mount for the dual came
 <br/>
 
 ### More Examples:
-#### Samples are also provided in original resolution
+#### Samples are also included in original resolution
 ![example_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/example_1.gif)
 
 ![example_2](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/example_2.gif)
