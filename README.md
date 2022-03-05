@@ -58,12 +58,15 @@ Visible and thermal images contain radically different information that often do
 [visibleCanny, cannyOverlayedView, thermalCanny],
 [crossCorrelationFrame, croppedOverlayedAligned, simulatedCroppedOverlayedCanny]]
  ```
-
-- The medial canthus of each detected face can be labelled in real time by toggling "Display Medial Canthus Temperatures" 
-
-- The opacity of ```overlayedView``` and ```croppedOverlayedAligned``` can be controlled via the opacity slider.
+- The medial canthus temperature of each detected face can be labelled in real time by toggling "Display Medial Canthus Temperatures"
 
 - The displayed views can be saved as a video or as individal frames.
+
+- Min/max temperatures are labelled on ```thermal_image```
+
+- Spot temperature readings are labelled on ```visibleImageDetectedFaces``` and ```visibleImageDetectedFaces``` at the mouse cursor's position
+
+- The opacity of ```overlayedView``` and ```croppedOverlayedAligned``` can be controlled via the opacity slider.
 
 - Canny edge detection hysteresis thresholds can be controlled for each image via sliders.
 
@@ -137,7 +140,7 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 
 <br/>
 
-The included stl can be printed to serve as an alignment mount for the dual cameras
+The included stl can be printed to serve as an alignment mount for the dual cameras:
 
 <img src="https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/dual_cam_module_v7.png" width="500" />
 
