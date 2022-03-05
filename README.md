@@ -6,7 +6,7 @@
 
 ![mainExample_4](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_4.gif)
 
-![startupExample](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/startupExample.gif)
+![mainExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_1.gif)
 
 <br/>
 
@@ -36,17 +36,17 @@ python3 DNNFacialLandmarkThermometer.py
 
 <br/>
 
-![mainExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_1.gif)
-
 ![mainExample_2](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_2.gif)
-
-![mainExample_3](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_3.gif)
 
 <br/>
 
 ### Working Principles:
 
 Visible and thermal images contain radically different information that often do not correlate. This issue is side-stepped by performing Canny edge-detection and finding the (x, y) offsets between images which maximize 'similiarity' between detected edges. The images are aligned according to the coordinates of the maximum computed cross-correlation. 
+
+<br/>
+
+![mainExample_3](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_3.gif)
 
 <br/>
 
@@ -109,11 +109,11 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 
 - Future offloading of processing to the GPU should generally improve performance, however, Jetson Xavier NX may be a better choice for future revisions as the Nano's CPU is used heavily and showing its limits.
 
-- A Jetson Nano 4GB is highly recommended as the facial detection model and matrix operations consume ~1GB of RAM. This project may run on the Jetson Nano 2GB, but this hasn't been tested yet and will likely result in severe memory thrashing.
+- A Jetson Nano 4GB is highly recommended as the facial detection model and matrix operations consume ~1GB of RAM. This project may run on the Jetson Nano 2GB, but this hasn't been tested yet and may result in severe memory thrashing.
 
 <br/>
 
-### Potential future improvments/features:
+### Potential future improvements/features:
 
 - Manually setting high-gain mode & skin emissivity values via firmware
 - Implementing command line options
@@ -129,6 +129,7 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 ### Supporting Resources:
 
 *Multispectral Thermal Imaging with a LWIR+VIS Camera*
+
 - Hines, Jacob, and Evan Wang. “Multispectral Thermal Imaging with a LWIR+VIS Camera.” *Stanford EE367 / CS448I: Computational Imaging*, Stanford University, 17 Mar. 2019, http://stanford.edu/class/ee367/Winter2019/hines_wang_report.pdf.
 
   - Extremely illuminating and informative survey into multispectral image registration and fusion. Many thanks to the Authors!
@@ -137,6 +138,7 @@ Currently, this implementation naively chooses the coordinates of the maximum si
 <br/>
 
 The included stl can be printed to serve as an alignment mount for the dual cameras
+
 <img src="https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/dual_cam_module_v7.png" width="500" />
 
 <br/>
@@ -152,7 +154,9 @@ The included stl can be printed to serve as an alignment mount for the dual came
 <br/>
 
 ### More Examples:
-#### Samples are also included in original resolution
+#### Samples are also provided in original resolution
 ![example_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/example_1.gif)
 
 ![example_2](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/example_2.gif)
+
+![startupExample](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Other%20Examples/startupExample.gif)
