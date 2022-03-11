@@ -111,7 +111,7 @@ Currently, this implementation naively chooses the coordinates of maximum simila
 
 - This project is built upon the stock Jetson Nano 4GB Developer Kit SD Card Image (JetPack 4.6) released by NVIDIA. Apart from building OpenCV from source for CUDA support, all dependencies are included in the stock image.
 
-- Future offloading of processing to the GPU should generally improve performance
+- Future offloading of image processing to the Jetson's GPU and the STM32F412 microprocessor in the PureThermal Mini should generally improve performance
 
 - A Jetson Nano 4GB is highly recommended as the facial detection model and matrix operations consume ~1GB of RAM. This project may run on the Jetson Nano 2GB, but this hasn't been tested yet and may result in severe memory thrashing.
 
