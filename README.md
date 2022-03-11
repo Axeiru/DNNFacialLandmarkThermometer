@@ -17,11 +17,12 @@
   | PureThermal Mini - FLIR Lepton Smart I/O Module, [link.](https://groupgets.com/manufacturers/getlab/products/purethermal-mini-flir-lepton-smart-i-o-module)  | $79.99  |
   | Arducam Sensor Extension Cable 300MM, [link.](https://www.arducam.com/product/b0186-arducam-imx219-sensor-extension-cable-raspberry-pi-nvidia-jetson-nano/)  | $12.99  |
   | NF-A4x20 5V PWM, [link.](https://noctua.at/en/nf-a4x20-5v-pwm)  | $25.00  |
-  | Total: | **~$395** |
+  | SAMSUNG EVO Select Micro SD Card + Adapter - 64GB, [link.](https://www.amazon.com/dp/B09B1F9L52/) | $9.99 | 
+  | Total: | **~$405** |
 
   | Alternate Solution | Approximate Price |
   | ------------- | ------------- |
-| TELEDYNE FLIR BOSON 640 X 512, [link,](https://www.flir.com/products/boson/)  [link.](https://www.oemcameras.com/flir-boson-640x480-24mm.htm)  | **~$3,520.00**  |
+| TELEDYNE FLIR BOSON 640 X 512, [link.](https://www.flir.com/products/boson/)  [link.](https://www.oemcameras.com/flir-boson-640x480-24mm.htm)  | **~$3,520.00**  |
 
 
 ![mainExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_1.gif)
