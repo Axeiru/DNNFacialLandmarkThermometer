@@ -9,18 +9,19 @@
 
 ### Parts
 
- - Raspberry Pi Camera Module 2, [link.](https://www.raspberrypi.com/products/camera-module-v2/)
+| Item  | Approximate Price |
+| ------------- | ------------- |
+| Raspberry Pi Camera Module 2, [link.](https://www.raspberrypi.com/products/camera-module-v2/)  | $25.00  |
+| FLIR Lepton 3.5, 160×120, 57° with shutter, [link.](https://www.flir.com/products/lepton/?model=3.5+Lepton) [link.](https://groupgets.com/manufacturers/teledyne-flir/products/lepton-3-5) | $149.00  |
+  | Jetson Nano Developer Kit, [link.](https://developer.nvidia.com/embedded/jetson-nano-developer-kit)  | ~$99  |
+  | PureThermal Mini - FLIR Lepton Smart I/O Module, [link.](https://groupgets.com/manufacturers/getlab/products/purethermal-mini-flir-lepton-smart-i-o-module)  | $79.99  |
+  | Arducam Sensor Extension Cable 300MM, [link.](https://www.arducam.com/product/b0186-arducam-imx219-sensor-extension-cable-raspberry-pi-nvidia-jetson-nano/)  | $12.99  |
+  | NF-A4x20 5V PWM, [link.](https://noctua.at/en/nf-a4x20-5v-pwm)  | $25.00  |
+  | Total: | **~$395** |
 
- - FLIR Lepton 3.5, 160×120, 57° with shutter, [link.](https://www.flir.com/products/lepton/?model=3.5+Lepton)
-
- - Jetson Nano Developer Kit, [link.](https://developer.nvidia.com/embedded/jetson-nano-developer-kit)
-
- - PureThermal Mini - FLIR Lepton Smart I/O Module, [link.](https://groupgets.com/manufacturers/getlab/products/purethermal-mini-flir-lepton-smart-i-o-module)
-
- - Arducam Sensor Extension Cable 300MM, [link.](https://www.arducam.com/product/b0186-arducam-imx219-sensor-extension-cable-raspberry-pi-nvidia-jetson-nano/)
- 
- - NF-A4x20 5V PWM, [link.](https://noctua.at/en/nf-a4x20-5v-pwm)
-
+  | Alternate Solution | Approximate Price |
+  | ------------- | ------------- |
+| TELEDYNE FLIR BOSON 640 X 512, [link,](https://www.flir.com/products/boson/)  [link.](https://www.oemcameras.com/flir-boson-640x480-24mm.htm)  | **~$3,520.00**  |
 
 
 ![mainExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_1.gif)
