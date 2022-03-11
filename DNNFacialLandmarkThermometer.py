@@ -57,7 +57,7 @@ def displayTemperature(img, tempKelvin, position, color):
 
 
 def displayFaceTemperature(img, tempKelvin, position, color, size, displayMedialCanthusTemp):
-    # Label temperature onto image, specifc to faces
+    # Labels temperature onto image, specifc to faces
     val = ctof(tempKelvin)
     if displayMedialCanthusTemp.get():
         output = cv2.putText(img, str('{:g}'.format(float('{:.{p}g}'.format(val, p=3)))), (position[0]-20, position[1]-20), cv2.FONT_HERSHEY_COMPLEX, 0.5, color, 2) ##'p=3' represents number of sigfigs to display
@@ -95,7 +95,7 @@ def gstreamer_pipeline(
 
 def detectFaces(self, visible_image, thermal_image, thermal_data):
     # Main logic loop, detects faces, labels them on the output image and looks up temperature from thermal camera
-    # returns labelled images, and true if fever detected
+    # Returns labelled images, and true if fever detected
     dnnfaces = []
     (h, w) = visible_image.shape[:2]
     feverDetected = False
@@ -312,7 +312,7 @@ class GUI:
 
     def cannyBasedImageRegistration(self, visible_image, thermal_image):
         # Performs canny edge detection on the visible and thermal frames, the hysteresis thresholding is based on max/min slider user input 
-        # returns second row frame by concatenating: visibleCanny, cannyOverlayedView, thermalCanny horizontally
+        # Returns second row frame by concatenating: visibleCanny, cannyOverlayedView, thermalCanny horizontally
         visibleCanny = cv2.Canny(visible_image, self.visibleMinSlider.get(), self.visibleMaxSlider.get(), L2gradient=True)
         thermalCanny = cv2.Canny(thermal_image, self.thermalMinSlider.get(), self.thermalMaxSlider.get(), L2gradient=True)
 
