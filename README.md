@@ -7,7 +7,7 @@
 ![mainExample_4](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_4.gif)
 
 
-### Parts
+### Parts List
 
 | Item  | Approximate Price |
 | ------------- | ------------- |
@@ -18,11 +18,15 @@
   | Arducam Sensor Extension Cable 300MM, [link.](https://www.arducam.com/product/b0186-arducam-imx219-sensor-extension-cable-raspberry-pi-nvidia-jetson-nano/)  | $12.99  |
   | NF-A4x20 5V PWM, [link.](https://noctua.at/en/nf-a4x20-5v-pwm)  | $25.00  |
   | SAMSUNG EVO Select Micro SD Card + Adapter - 64GB, [link.](https://www.amazon.com/dp/B09B1F9L52/) | $9.99 | 
-  | Total: | **~$405** |
+  | Intel Dual Band Wireless-AC 8265 Desktop Kit, [link.](https://www.amazon.com/Intel-Wireless-Access-Point-8265-NGWMG-DTX1-Desktop/dp/B07666K4PZ) | ~$25 | 
+  | Adafruit 5V 4A (4000mA) switching power supply - UL Listed, [link.](https://www.adafruit.com/product/1466) | $14.95 |
+  | Cable Matters Combo-Pack Right Angle USB Cable, [link.](https://www.amazon.com/gp/product/B00S8GU03A/) | $7.99 |
+  | Total: | **~$500** |
 
-  | Alternate Solution | Approximate Price |
+  | Alternate Solution(incomplete) | Approximate Price |
   | ------------- | ------------- |
 | TELEDYNE FLIR BOSON 640 X 512, Core Only, [link.](https://www.flir.com/products/boson/)  [link.](https://www.oemcameras.com/flir-boson-640x480-24mm.htm)  | **~$3,520.00**  |
+| Note: Requires additional supporting hardware. | |
 
 
 ![mainExample_1](https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/examples/Main%20Examples/mainExample_1.gif)
@@ -98,6 +102,8 @@ This implementation is entirely linear and naive. It does template-matching whic
 
 Currently, this implementation naively chooses the coordinates of maximum similarity, when better heuristics may exist:
 
+- A neural-based [Deep Image Homography Estimation](https://arxiv.org/pdf/1606.03798.pdf) model may be particularly effective
+
 - A monocular depth estimation model may be used in tandem with a semantic segmentation model to non-linearly deform the images to match
 
 - A momentum-based point model could be used to prevent discontinuitues in image offsets, ensuring smooth adjustments
@@ -117,7 +123,7 @@ Currently, this implementation naively chooses the coordinates of maximum simila
 
 - A Jetson Nano 4GB is highly recommended as the facial detection model and matrix operations consume ~1GB of RAM. This project may run on the Jetson Nano 2GB, but this hasn't been tested yet and may result in severe memory thrashing.
 
-#### Framerate Performance Notes:
+#### Framerate-specific Notes:
 
 - Ideally, images would be captured from each camera in separate threads, however, tkinter is inherently single-threaded. Future revisions may move away from tkinter to implement proper multithreaded image capture.
 
@@ -146,13 +152,12 @@ Currently, this implementation naively chooses the coordinates of maximum simila
 
   - Extremely illuminating and informative survey into multispectral image registration and fusion. Many thanks to the Authors!
   
+Access to a 3D printer is recommended but not necessary. The [Jetson NanoBoxABS for B01](https://www.thingiverse.com/thing:4275167) is a nice case that I can recommend.
 
 
-
-The included stl can be printed to serve as an alignment mount for the dual cameras:
+The included stl can be printed to serve as an alignment mount for the FLIR Lepton & Raspberry Pi Camera Module:
 
 <img src="https://github.com/Axeiru/DNNFacialLandmarkThermometer/blob/main/dual_cam_module_v7.png" width="500" />
-
 
 
 - Copies of required files are included, however, original sources are listed below and deserve many thanks!
